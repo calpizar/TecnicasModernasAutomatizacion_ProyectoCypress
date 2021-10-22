@@ -25,3 +25,5 @@ class HomePage{
         this.elements.getHomeButton.click();
     }
 }
+
+export const homePage = new HomePage ();

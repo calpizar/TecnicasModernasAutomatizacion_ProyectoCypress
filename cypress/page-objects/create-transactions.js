@@ -31,3 +31,5 @@ class CreateTransactionPage{
         this.elements.getAnotherTransactionButton.click();
     }
 }
+
+export const createTransactionPage = new CreateTransactionPage ();

@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { CreateAccountsPage } from '../../page-objects/create-account';
+import { createAccountsPage } from '../../page-objects/create-account';
 
 context('Bank Accounts', () => {
     beforeEach(() => {
@@ -15,12 +15,12 @@ context('Bank Accounts', () => {
 
   context('Create New Bank Account', () =>{
     it('should create new bank account', () => {
-    CreateAccountsPage.typeCreateAccountFields({
+    createAccountsPage.typeCreateAccountFields({
         banktName: Cypress.env('bankName'),
         routingNumber: Cypress.env('routingNumber'),
         accountNumber: Cypress.env('accountNumber'),
       });
-      CreateAccountsPage.clickSaveButton();
+      createAccountsPage.clickSaveButton();
       cy.url().should('include', '/bankaccounts');
       cy.get('[data-test^=bankaccount-list-item]').contains("CITIBANK").should('be.visisble');
     });

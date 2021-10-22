@@ -27,4 +27,4 @@ class RegisterPage{
         this.elements.getSignUpButton().click();
       }
     }
-
+    export const registerPage = new RegisterPage ();

@@ -24,3 +24,4 @@ class CreateAccountsPage{
         this.elements.getSaveButton().click();
       }
     }
+    export const createAccountsPage = new CreateAccountsPage ();

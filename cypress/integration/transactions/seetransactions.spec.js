@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { HomePage } from '../../page-objects/home-page';
+import { homePage } from '../../page-objects/home-page';
 
 context('Home Page', () => {
     beforeEach(() => {
@@ -15,12 +15,12 @@ context('Home Page', () => {
 
   context('Home Page Transactions - Like', () =>{
     it('should like transaction item', () => {
-    HomePage.addLiketoTransaction();
+    homePage.addLiketoTransaction();
         });
     });
     context('Home Page Transactions - Comment', () =>{
         it('should add comment to transaction item', () => {
-        HomePage.addCommenttoTransaction();
+        homePage.addCommenttoTransaction();
         cy.get('[data-test^=comment-list-item]').assert.isNotEmpty({});
         });
     });

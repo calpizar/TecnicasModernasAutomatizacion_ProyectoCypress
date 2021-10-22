@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { CreateTransactionPage } from '../../page-objects/create-transactions';
+import { createTransactionPage } from '../../page-objects/create-transactions';
 
 context('Transactions', () => {
     beforeEach(() => {
@@ -15,7 +15,7 @@ context('Transactions', () => {
 
   context('Create New Transaction Request', () =>{
     it('should create new transaction request', () => {
-    CreateTransactionPage.createNewTransactionRequest();
+    createTransactionPage.createNewTransactionRequest();
     cy.get(['data-test="nav-personal-tab']).click();
     cy.url().should('include','/personal');
     cy.get('[data-test^=transaction-item]').filter(':contains("requested")').first().should('be.visible');
@@ -23,7 +23,7 @@ context('Transactions', () => {
 
     context('Create New Transaction Payment', () =>{
         it('should create new transaction payment', () => {
-        CreateTransactionPage.createNewTransactionPayment();
+        createTransactionPage.createNewTransactionPayment();
         cy.get(['data-test="nav-personal-tab']).click();
         cy.url().should('include','/personal');
         cy.get('[data-test^=transaction-item]').filter(':contains("paid")').first().should('be.visible');

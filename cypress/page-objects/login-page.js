@@ -22,5 +22,5 @@ class LoginPage{
       }
     }
 
-//export const LoginPage = new LoginPage ();
+export const LoginPage = new LoginPage ();
 
