@@ -1,0 +1,17 @@
+{
+  "env": {
+    "requestBaseUrl": "http://localhost:3001"
+  },
+  "baseUrl": "http://localhost:3000",
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "./reports",
+    "override": false,
+    "html": true,
+    "json": true
+  },
+  "screenshotsFolder": "./reports/assets/screenshots",
+  "videosFolder": "./reports/assets/videos"
+}
